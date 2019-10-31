@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <!-- 导入样式 -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- 导入jq -->
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div id="login">
+    <div class="top">
+        <h3>会员注册</h3>
+    </div>
+    <div class="con">
+       <figure>
+          <img src="/static/upload/goods/images/huiyuan.jpg" alt="">
+       </figure>
+       <div class="log">
+           <form action="/index/register" method="post" onsubmit="return login();">
+               {% csrf_token %}
+               <div>
+                   <label for="">手机号</label>
+                   <input class="txt" placeholder="请输入手机号" type="text" id="uphone" name="uphone">
+               </div>
+               <div>
+                   <label for="">用户名</label>
+                   <input class="txt" placeholder="请输入用户名" type="text" id="uname" name="uname">
+               </div>
+               <div>
+                   <label for="">邮箱</label>
+                   <input class="txt" placeholder="请输入邮箱" name="uemail" id="uemail" type="text">
+               </div>
+               <div>
+                   <label for="">密码</label>
+                   <input class="txt" placeholder="请输入密码" type="password" id="userpass1" name="userpass1">
+               </div>
+               <div>
+                   <label for="">密码</label>
+                   <input class="txt" placeholder="请再次输入密码" type="password" id="userpass2" name="userpass2">
+               </div>
+               <div>
+                   <label for=""></label>
+                   <input type="submit" class="btn" value="注册会员">
+                   <a href="/index/login"><input id="log" type="button" class="btn" value="登录"></a>
+               </div>
+           </form>
+       </div>
+    </div>
+</div>
+<script src="/static/js/index1.js"></script>
+</body>
+</html>

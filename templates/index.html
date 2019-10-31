@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <style>
+        /* 全局样式 */
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+
+        body {
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .fl {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .cb {
+            clear: both;
+        }
+
+        img {
+            width: 100%
+        }
+
+        #index {
+            width: 995px;
+            margin: 0px auto;
+        }
+
+        /* 具体每一块的样式 */
+        .header {
+            padding: 8px 0px 8px 15px;
+            background-color: #eee;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .city{
+            display: none;
+            position: absolute;
+            z-index: 999;
+            top:27px;
+            left: 17px;
+            background-color: #ccc;
+            padding: 5px 10px;
+        }
+        .header .select{
+            margin-top: 10px;
+            margin-right: 10px;
+            width: 0px;
+            height: 0px;
+            border: solid  5px #000;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent
+
+        }
+        .header a{
+            margin-right: 10px
+        }
+
+        .swipe {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .swipe .ren {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-right: 30px;
+            margin-bottom: 15px
+        }
+
+        .swipe .ren span {
+            margin-right: 10px;
+            display: inline-block;
+            width: 23px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #666;
+            color: #fff;
+        }
+
+        .swipe .ren .focus {
+            background-color: red;
+        }
+
+        .mid {
+            margin-bottom: 15px;
+        }
+
+        .mid ul li {
+            width: 240px;
+            margin-right: 8px;
+        }
+
+        mid ul li:nth-child(4) {
+            margin-right: 0px;
+        }
+
+        .box {
+            width: 190px;
+            border: solid 0px red;
+            margin-right: 7px;
+        }
+
+        .box .tip img {
+            width: 30px;
+        }
+
+        .box .tip h4,
+        .box .tip p {
+            margin: 5px;
+        }
+
+        .box .tip p {
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .box .tip figure {
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        .bottom{
+            margin-bottom: 50px;
+        }
+        .bottom p{
+            text-align: center
+        }
+    </style>
+    <script type="text/javascript" src="/static/js/jquery-1.11.3.js"></script>
+    <script src="/static/js/index.js"></script>
+</head>
+
+<body>
+    <!--1. 构建页面元素 -->
+    <!--2. 编写页面格式 -->
+    <!--3. 编写页面逻辑 -->
+    <div id="index">
+        <!-- 头部导航 -->
+        <div class="header">
+            <div class="left fl">
+                <a class="fl" href="">北京</a>
+                <div class="fl select"></div>
+                <a class="fl" href="#">满百包邮</a>
+                <a class="fl" href="#">昨夜达</a>
+                <div class="cb"></div>
+            </div>
+            <div class="right fr" id="login">
+                <a href="/index/login">[登录]</a>,
+                <a href="/index/register">[注册 有惊喜]</a> |
+                <a href="#">果园公告</a> |
+                <a href="#">券卡兑换</a> |
+                <a href="#">手机果园</a>
+            </div>
+            <div class="cb"></div>
+        </div>
+        <!-- 图片切换图 -->
+        <div class="swipe">
+            <figure>
+                <img id="img" src="/static/upload/goods/images/banner1.jpg" alt="">
+            </figure>
+            <div class="ren">
+                <span class="focus">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </div>
+        <!-- 中间导航条 -->
+        <div class="mid">
+            <ul>
+                <li class="fl">
+                    <figure>
+                        <img src="/static/upload/goods/images/01.jpg" alt="">
+                    </figure>
+                </li>
+                <li class="fl">
+                    <figure>
+                        <img src="/static/upload/goods/images/02.jpg" alt="">
+                    </figure>
+                </li>
+                <li class="fl">
+                    <figure>
+                        <img src="/static/upload/goods/images/03.jpg" alt="">
+                    </figure>
+                </li>
+                <li class="fl">
+                    <figure>
+                        <img src="/static/upload/goods/images/03.jpg" alt="">
+                    </figure>
+                </li>
+                <div class="cb"></div>
+            </ul>
+
+        </div>
+        <!-- 中间列表 -->
+        <div class="lst" id="main">
+            <div class="title">
+                <h3 class="fl">礼品卡券</h3>
+                <div class="fr">更多</div>
+                <div class="cb"></div>
+            </div>
+            <ul>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="fl">
+                    <div class="box">
+                        <figure>
+                            <img src="/static/upload/goods/images/09.jpg" alt="">
+                        </figure>
+                        <div class="tip">
+                            <div class="fl">
+                                <h4>欢乐时光水果</h4>
+                                <p>$188.00/1份</p>
+                            </div>
+                            <div class="fr">
+                                <figure>
+                                    <img src="/static/upload/goods/images/cart.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <ul class="city">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+
+    <script>
+       $(".select").on("click",function(){
+           $(".city").css({"display":"block"});
+       });
+       $(".city").on("mouseout",function(){
+           $(this).css({"display":"none"});
+       }).on("mouseover",function(){
+        $(".city").css({"display":"block"});
+       });
+       $(".city li").each(function(i,e){
+           $(e).on("click",function(e){
+               console.log("1");
+           });
+       });
+    </script>
+</body>
+
+</html>

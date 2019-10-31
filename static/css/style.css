@@ -1,0 +1,266 @@
+/* 编写公用样式 */
+ul,p,body,table,figure,h3{
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:#666;
+}
+/* 导航栏样式 开始*/
+#nav{
+    width: 944px;
+    border: solid 0px red;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #eee;
+    padding: 8px;
+}
+#nav .nleft{
+    float: left;
+}
+#nav .nleft a{
+    margin-right: 10px;
+}
+#nav .nright{
+    float: right;
+}
+/* 导航栏样式 结束*/
+/* 大图切换的样式 开始 */
+#swipe{
+    position: relative;
+    width: 960px;
+    border: solid 0px red;
+    margin: 15px auto;
+}
+#swipe img{
+    width: 100%;
+}
+#swipe ul{
+    position: absolute;
+    right:0;
+    bottom:0;
+    overflow: hidden;
+}
+#swipe ul .focus{
+    background-color: red;
+}
+#swipe ul li{
+    float: left;
+    margin-right: 20px;
+    margin-bottom:10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #666;
+    color:#fff;
+    text-align: center;
+    line-height:20px;
+}
+/* 广告图片的样式 开始*/
+#ad{
+    width: 960px;
+    border:solid 0px red;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#ad img:not(:last-child){
+    float: left;
+    margin-right: 30px;
+}
+/* 广告图片的样式 结束*/
+/* 编写分隔线的样式 开始*/
+.line{
+    width: 960px;
+    margin: 15px auto;
+    border-top:solid 1px #ccc;
+}
+/* 编写分隔线的样式 结束*/
+/* 编写页面每层的样式 */
+.layer{
+    width: 960px;
+    margin: 0 auto;
+    margin: border 1px red;
+}
+.layer .nav{
+    overflow: hidden;
+}
+.layer .nav h3{
+    float: left;
+}
+.layer .nav a{
+    float: right;
+}
+.layer .items{
+    border:solid 0px red;
+    padding: 5px 0;
+    overflow: hidden;
+}
+.layer .item{
+    border:solid 0px red;
+    float: left;
+    width: 230px;
+    margin-right: 13px;
+}
+.layer .clear{
+    margin-right: -13px;
+}
+.layer .item figure img{
+    width: 100%;
+}
+.layer .item .bottom{
+    overflow: hidden;
+    padding: 5px 8px;
+}
+.layer .item .bottom .bleft{
+    float: left;
+}
+.layer .item .bottom .bleft p{
+    color:#444;
+}
+.layer .item .bottom .bright{
+    float: right;
+}
+/* 编写页面每层的样式 结束*/
+/* 编写公司信息介绍样式 开始 */
+#info{
+    width: 960px;
+    border: solid 0px red;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#info .item{
+    border: solid 0px red;
+    float: left;
+    overflow: hidden;
+    width: 239px;
+    border-right: solid 1px #ccc;
+}
+#info .item:last-child{
+    border-right: solid 1px #fff;
+}
+#info .item figure{
+    float: left;
+    margin: 5px 25px;
+}
+#info .item .iright{
+    float: left;
+    margin: 0 10px;
+}
+#info .item .iright h3{
+    font-size: 18px;
+}
+/* 编写公司信息介绍样式 结束 */
+/* 编写公司二维码信息样式 开始 */
+#code{
+    border:solid 0px red;
+    margin: 0 auto;
+    width: 650px;
+    overflow: hidden;
+}
+#code .cimg{
+    float: left;
+    overflow: hidden;
+}
+#code .cimg figure{
+    width: 120px;
+    float: left;
+    margin: 10px;
+}
+#code .cimg figure img{
+    width: 100%;
+}
+#code .cimg figure h3{
+    text-align: center;
+    color:#444;
+}
+#code .cinfo{
+    float: left;
+    padding: 20px 15px;
+    overflow: hidden;
+}
+#code .cinfo ul{
+    width: 65px;
+    float: left;
+    margin-right:20px;
+}
+#code .cinfo ul li:first-child{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#code .cinfo ul li:not(:first-child){
+    margin-bottom: 5px;
+}
+/* 编写公司二维码信息样式 结束 */
+/* 编写公司版权样式 开始 */
+#copy{
+    text-align: center;
+}
+#copy div{
+    margin: 8px 0;
+}
+#copy div a{
+    color:green;
+}
+/* 编写公司版权样式 结束 */
+/* 编写公司登录页样式 开始 */
+#login{
+    width: 960px;
+    margin: 50px auto;
+    border: solid 0px red;
+}
+#login .top{
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 20px;
+    margin-bottom:20px
+}
+#login .top h3{
+    font-size: 20px;
+    color:#444;
+}
+#login .con{
+    overflow: hidden;
+}
+#login .con figure{
+    float: left;
+}
+#login .con .log{
+    float: left;
+    margin: 85px 0px 0px 50px;
+    border: solid 0px red;
+}
+#login .con .log label{
+    display: inline-block;
+    width: 50px;
+    margin-right: 8px;
+    text-align: right;
+}
+#login .con .log div{
+    margin: 20px 0;
+}
+#login .con .log .txt{
+    padding: 8px 10px;
+    width: 258px;
+}
+#login .con .log .a1{
+    margin-left: 100px;
+}
+#login .con .log .btn{
+    width: 125px;
+    background-color: #fff;
+    color:green;
+    padding: 8px 0;
+    border:solid 1px green;
+    margin-right: 28px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+#login .con .log .btn:hover{
+    background-color: green;
+    color:#fff;
+}
+/* 编写公司登录页样式 结束 */
